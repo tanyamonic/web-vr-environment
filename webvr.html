@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Guardians of the Galaxy Planet</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system/dist/aframe-physics-system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-particle-system-component/dist/aframe-particle-system-component.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- Celestial Background -->
+    <a-sky src="sun-cloud.jpg" rotation="0 -90 0"></a-sky>
 
+    <!-- Land -->
+    <a-entity geometry="primitive: plane; width: 100000; height: 100000;" rotation="-90 0 0" material="color: green" position="0 0.01 0" static-body></a-entity>
+
+    <!-- Houses -->
+    <a-entity gltf-model="url(house1.gltf)" scale="0.1 0.1 0.1" position="-15 0 15"></a-entity>
+    <a-entity gltf-model="url(house2.gltf)" scale="0.2 0.2 0.2" position="15 0 15"></a-entity>
+
+    <!-- Animals -->
+    <a-entity gltf-model="url(animal1.gltf)" scale="0.05 0.05 0.05" position="-20 0 -20"></a-entity>
+    <a-entity gltf-model="url(animal2.gltf)" scale="0.08 0.08 0.08" position="20 0 -20"></a-entity>
+
+    <!-- Spaceship Model -->
+    <a-entity gltf-model="url(spaceship.gltf)" scale="0.1 0.1 0.1" position="0 0 0"></a-entity>
+
+    <!-- Alien Flora and Fauna -->
+    <a-entity gltf-model="url(alien-plant1.gltf)" scale="0.05 0.05 0.05" position="-10 0 -10"></a-entity>
+    <a-entity gltf-model="url(alien-plant2.gltf)" scale="0.08 0.08 0.08" position="10 0 -10"></a-entity>
+    <a-entity gltf-model="url(alien-creature1.gltf)" scale="0.2 0.2 0.2" position="-15 0 5"></a-entity>
+    <a-entity gltf-model="url(alien-creature2.gltf)" scale="0.3 0.3 0.3" position="15 0 5"></a-entity>
+
+    <!-- Space Stations or Alien Structures -->
+    <a-entity gltf-model="url(space-station.gltf)" scale="0.3 0.3 0.3" position="-20 0 20"></a-entity>
+    <a-entity gltf-model="url(alien-structure.gltf)" scale="0.2 0.2 0.2" position="20 0 20"></a-entity>
+
+    <!-- Particle Effects -->
+    <a-entity particle-system="preset: dust; particleCount: 5000; color: #b2a180, #c2b280; size: 1; velocityValue: 1 1 1; velocitySpread: 1 1 1; position: 0 1 0; scale: 100 100 100;"></a-entity>
+  </a-scene>
+</body>
+</html>
